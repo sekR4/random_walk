@@ -3,10 +3,14 @@ from html.parser import HTMLParser
 
 class MyHTMLParser(HTMLParser):
     def handle_data(self, data):
-        print("Data:", data)
+        if len(data) > 1:
+            print(">>> Data", data, sep='\n')
 
     def handle_comment(self, data):
-        print("Comment:", data)
+        if data.count('\n') > 0:
+            print(">>> Multi-line Comment", data, sep='\n')
+        if data.count('\n') == 0:
+            print(">>> Single-line Comment", data, sep='\n')
 
 
 html = ""
@@ -22,6 +26,8 @@ lines = ["<!--[if IE 9]>IE9-specific content",
 for line in lines:
     html += line.rstrip()
     html += '\n'
+
+# print(html.replace('\n', ''))
 
 parser = MyHTMLParser()
 parser.feed(html)
