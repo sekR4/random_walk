@@ -11,7 +11,7 @@ def get_attr_number(node):
     #     score += len(child.attrib)
     # return score
 
-    # thx to tricerabottoms
+    # thx to asakurajano
     return sum([len(elem.items()) for elem in node.iter()])
     # return etree.tostring(node).count(b'=')
 
