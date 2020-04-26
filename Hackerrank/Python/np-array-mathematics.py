@@ -1,13 +1,5 @@
+# thx to Boki
 import numpy as np
-
-_ = map(int, input().split())
-
-A = np.array(list(map(int, input().split())))
-B = np.array(list(map(int, input().split())))
-
-print('[' + str(A+B) + ']')
-print('[' + str(A-B) + ']')
-print('[' + str(A*B) + ']')
-print('[' + str(A//B) + ']')
-print('[' + str(A % B) + ']')
-print('[' + str(A**B) + ']')
+n, m = map(int, input().split())
+a, b = (np.array([input().split() for _ in range(n)], dtype=int) for _ in range(2))
+print(a+b, a-b, a*b, a//b, a % b, a**b, sep='\n')
