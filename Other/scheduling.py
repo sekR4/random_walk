@@ -43,4 +43,4 @@ while True:
     schedule.run_pending()
     time.sleep(1)
 
-# schedule.clear('daily-tasks')
+# schedule.clear('test')
