@@ -1,17 +1,5 @@
 import numpy as np
-
-n,m = input().split()
-
-N = int(n)
-M = int(m)
-
-arr=[]
-for pair in range(N):
-    arr.append(list(map(int, input().split())))
-
-np_arr = np.array(arr)
-
-np.set_printoptions(legacy='1.13')
-print(np.mean(np_arr, axis = 1))
-print(np.var(np_arr, axis = 0))
-print(round(np.std(np_arr),11))
+np.set_printoptions(legacy='1.13')  # hackerrank demands a certain format
+n, _ = map(int, input().split())
+arr = np.array([list(map(int, input().split())) for _ in range(n)])
+print(np.mean(arr, axis=1), np.var(arr, axis=0), round(np.std(arr), 12), sep='\n')
