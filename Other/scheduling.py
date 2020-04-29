@@ -7,6 +7,7 @@ import time
 import os
 
 # inspired by
+# https://schedule.readthedocs.io/en/stable/
 # https://github.com/h3llrais3r/Deluge-PreventSuspendPlus/blob/master/deluge_preventsuspendplus/core.py
 # https://stackoverflow.com/questions/57647034/prevent-sleep-mode-python-wakelock-on-python
 
