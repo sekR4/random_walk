@@ -1,23 +1,24 @@
-s = 'BANANA'
 
-# get unique consonants/vowels to start with
-consonants, vowels = [], []
-for letter in set(list(s)):
-    if letter not in 'AEIOU':
-        consonants.append(letter)
+# tribute goes to abitrolly who had the idea with counting back
+
+
+def minion_game(string):
+    kev, stu, s = [], [], string
+    for i in range(len(s)):
+        if s[i] in 'AEIOU':
+            kev.append(len(s)-i)
+        else:
+            stu.append(len(s)-i)
+
+    if sum(kev) == sum(stu):
+        print('Draw')
+    elif sum(kev) > sum(stu):
+        print(f'Kevin {sum(kev)}')
     else:
-        vowels.append(letter)
-
-# print(consonants)
-
-# collect points in list
-stuart, kevin = [], []
-
-stuart.append(sum([s.count(letter) for letter in consonants]))
-kevin.append(sum([s.count(letter) for letter in vowels]))
-
-print(stuart, kevin)  # first round 1 letter
+        print(f'Stuart {sum(stu)}')
 
 
-def count_substring(string, sub_string):
-    return sum([1 for i in range(len(string)-len(sub_string)+1) if string[i:i+len(sub_string)] == sub_string])
+if __name__ == '__main__':
+    # s = input()
+    s = 'BANANA'
+    minion_game(s)
