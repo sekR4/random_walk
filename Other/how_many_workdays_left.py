@@ -9,7 +9,6 @@ end = date(2020, 5, 28)
 
 delta = end - start
 
-
 cnt = 0
 cnt_reg = 0
 for i in range(delta.days + 1):
@@ -24,5 +23,3 @@ for i in range(delta.days + 1):
     cnt_reg += 1
 print(f'In {cnt} days my work is done at adviqo :).')
 print(cnt_reg)
-
-print((58-13)/24)
