@@ -9,6 +9,7 @@ end = date(2020, 5, 28)
 
 delta = end - start
 
+
 cnt = 0
 cnt_reg = 0
 for i in range(delta.days + 1):
