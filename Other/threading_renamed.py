@@ -1,7 +1,9 @@
 # https://www.youtube.com/watch?v=IEEhzQoKtQU
-# Theoretically threading should not give a performanc boost here,
+# Theoretically threading should not give a performance boost here,
 # since it is a CPU operation. Right?
 # Interestingly, already importing concurrent.futures crashes the script
+# Problem was the naming of this script. Originally i called it threading.py.
+# That caused a problem with the library
 
 import concurrent.futures
 # from concurrent.futures.thread import ThreadPoolExecutor
@@ -16,10 +18,10 @@ def Its_hip_to_be_square(number):
     return number**2
 
 
-# print(*map(Its_hip_to_be_square, numbers), sep='\n')
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    results = executor.map(Its_hip_to_be_square, numbers)
-    for result in results:
-        print(result)
+print(*map(Its_hip_to_be_square, numbers), sep='\n')
+# with concurrent.futures.ThreadPoolExecutor() as executor:
+#     results = executor.map(Its_hip_to_be_square, numbers)
+#     for result in results:
+#         print(result)
 
 print(f'Finished in {round(time.perf_counter()-start, 2)} second(s)')
