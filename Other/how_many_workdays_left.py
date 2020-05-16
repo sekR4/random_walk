@@ -5,12 +5,12 @@ import calendar
 # print(list(calendar.day_name)[calendar.weekday(2020, 5, 27)])
 
 start = datetime.date(datetime.today())
-end = date(2020, 5, 28)
+end = date(2020, 5, 27)
 
 delta = end - start
 
-cnt = 0
-cnt_reg = 0
+cnt = cnt_reg = 0
+
 for i in range(delta.days + 1):
     day = start + timedelta(days=i)
     yyyy, mm, dd = map(int, str(day).split('-'))
@@ -21,5 +21,6 @@ for i in range(delta.days + 1):
         # print(day, list(calendar.day_name)[calendar.weekday(yyyy, mm, dd)])
         cnt += 1
     cnt_reg += 1
-print(f'In {cnt} days my work is done at adviqo :).')
-print(cnt_reg)
+
+print(f'I will work {cnt} more days at adviqo :).')
+print(f'{cnt_reg} regular days left')
