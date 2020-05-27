@@ -1,8 +1,5 @@
 from datetime import datetime, date, timedelta
-import numpy as np
 import calendar
-
-# print(list(calendar.day_name)[calendar.weekday(2020, 5, 27)])
 
 start = datetime.date(datetime.today())
 end = date(2020, 5, 27)
