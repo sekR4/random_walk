@@ -1,4 +1,4 @@
-# Atom Packeges & Themes
+# Atom Packages & Themes
 apm install script                # Makes scripts executable within atom.
 apm install predawn-syntax        # Adjust settings then. It looks nice.
 apm install autocomplete-python   # Get some python specific suggestions during coding.
@@ -8,6 +8,6 @@ apm install python-autopep8       # Automatically adjusts your code to PEP8 when
 apm install linter-flake8         # Shows you whats wrong
 apm install linter                # Dependency for flake8
 
-# Python Packeges
+# Python Packages
 pip install autopep8
 pip install flake8
